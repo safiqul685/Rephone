@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Return Product</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f3f3f3;
+            font-family: Arial, sans-serif;
+        }
+
+        .return-box {
+            width: 100%;
+            max-width: 550px;
+            margin: 20px auto;
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .line {
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 9px;
+        }
+
+        .required {
+            color: red;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            background: white;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #ff9900;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #ff9900;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .note {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 18px;
+            line-height: 1.5;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="return-box">
+
+
+    <h1>
+        Return Product
+    </h1>
+
+
+    <div class="intro">
+
+        Please fill in your order details
+        and reason for return.
+
+    </div>
+
+
+    <div class="line"></div>
+
+
+    <!-- MOBILE NUMBER -->
+
+    <label>
+
+        Mobile Number
+
+        <span class="required">*</span>
+
+    </label>
+
+
+    <input
+        type="tel"
+        id="mobileNumber"
+        maxlength="10"
+        inputmode="numeric"
+        placeholder="Enter your mobile number"
+    >
+
+
+    <!-- ORDER ID -->
+
+    <label>
+
+        Order ID
+
+        <span class="required">*</span>
+
+    </label>
+
+
+    <input
+        type="text"
+        id="orderId"
+        placeholder="Enter your Order ID"
+    >
+
+
+    <!-- PRICE -->
+
+    <label>
+
+        Price (₹)
+
+        <span class="required">*</span>
+
+    </label>
+
+
+    <input
+        type="number"
+        id="price"
+        inputmode="numeric"
+        placeholder="Enter product price"
+    >
+
+
+    <div class="line"></div>
+
+
+    <!-- RETURN REASON -->
+
+    <label>
+
+        Why do you want to return?
+
+        <span class="required">*</span>
+
+    </label>
+
+
+    <select id="reason">
+
+        <option value="">
+            Select a reason
+        </option>
+
+        <option value="Product is damaged">
+            Product is damaged
+        </option>
+
+        <option value="Wrong product received">
+            Wrong product received
+        </option>
+
+        <option value="Product is not working">
+            Product is not working
+        </option>
+
+        <option value="Product is different from description">
+            Product is different from description
+        </option>
+
+        <option value="Changed my mind">
+            Changed my mind
+        </option>
+
+        <option value="Other">
+            Other
+        </option>
+
+    </select>
+
+
+    <!-- DETAILS -->
+
+    <label>
+
+        Additional Details
+
+        <span class="required">*</span>
+
+    </label>
+
+
+    <textarea
+        id="details"
+        maxlength="300"
+        placeholder="Please explain the reason for return..."
+    ></textarea>
+
+
+    <!-- SUBMIT -->
+
+    <button onclick="submitReturn()">
+
+        Submit Return Request
+
+    </button>
+
+
+    <div class="note">
+
+        Your return request will be reviewed
+        by our team.
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+
+function submitReturn() {
+
+
+    let mobileNumber =
+        document.getElementById("mobileNumber").value.trim();
+
+
+    let orderId =
+        document.getElementById("orderId").value.trim();
+
+
+    let price =
+        document.getElementById("price").value.trim();
+
+
+    let reason =
+        document.getElementById("reason").value;
+
+
+    let details =
+        document.getElementById("details").value.trim();
+
+
+
+    // MOBILE NUMBER CHECK
+
+    if (mobileNumber === "") {
+
+        alert("Please enter mobile number.");
+
+        return;
+
+    }
+
+
+    if (!/^[0-9]{10}$/.test(mobileNumber)) {
+
+        alert("Please enter a valid 10-digit mobile number.");
+
+        return;
+
+    }
+
+
+
+    // ORDER ID CHECK
+
+    if (orderId === "") {
+
+        alert("Please enter Order ID.");
+
+        return;
+
+    }
+
+
+
+    // PRICE CHECK
+
+    if (price === "") {
+
+        alert("Please enter product price.");
+
+        return;
+
+    }
+
+
+
+    // REASON CHECK
+
+    if (reason === "") {
+
+        alert("Please select a return reason.");
+
+        return;
+
+    }
+
+
+
+    // DETAILS CHECK
+
+    if (details === "") {
+
+        alert("Please enter additional details.");
+
+        return;
+
+    }
+
+
+
+    // CREATE RETURN REQUEST
+
+    let returnRequest = {
+
+        returnId:
+            "RET" + Date.now(),
+
+        mobileNumber:
+            mobileNumber,
+
+        orderId:
+            orderId,
+
+        price:
+            "₹" + price,
+
+        reason:
+            reason,
+
+        details:
+            details,
+
+        status:
+            "Return Requested",
+
+        date:
+            new Date().toLocaleString()
+
+    };
+
+
+
+    // GET OLD REQUESTS
+
+    let returns =
+        JSON.parse(
+            localStorage.getItem("returns")
+        ) || [];
+
+
+
+    // ADD REQUEST
+
+    returns.push(returnRequest);
+
+
+
+    // SAVE REQUEST
+
+    localStorage.setItem(
+        "returns",
+        JSON.stringify(returns)
+    );
+
+
+
+    // SAVE LAST REQUEST
+
+    localStorage.setItem(
+        "lastReturn",
+        JSON.stringify(returnRequest)
+    );
+
+
+
+    // OPEN SUCCESS PAGE
+
+    window.location.href =
+        "return-success.html";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Product</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="product.css">
+
+</head>
+
+
+<body>
+
+
+
+<div class="second-hand-menu">
+  Rephone :  Second Hand product (mumbai )
+</div>
+
+
+
+
+  
+
+
+<div class="container">
+
+
+    
+        
+
+
+
+<div class="slider">
+
+    <div class="product-image">
+        <img id="image1" src="" alt="Product Image">
+
+        <div class="product-live-box">
+            <span class="product-live-dot"></span>
+            <span class="product-live-text">LIVE</span>
+        </div>
+    </div>
+
+
+    <div class="product-image">
+        <img id="image2" src="" alt="Product Image">
+
+        <div class="product-live-box">
+            <span class="product-live-dot"></span>
+            <span class="product-live-text">LIVE</span>
+        </div>
+    </div>
+
+
+    <div class="product-image">
+        <img id="image3" src="" alt="Product Image">
+
+        <div class="product-live-box">
+            <span class="product-live-dot"></span>
+            <span class="product-live-text">LIVE</span>
+        </div>
+    </div>
+
+
+    <div class="product-image">
+        <img id="image4" src="" alt="Product Image">
+
+        <div class="product-live-box">
+            <span class="product-live-dot"></span>
+            <span class="product-live-text">LIVE</span>
+        </div>
+    </div>
+
+
+    <div class="product-image">
+        <img id="image5" src="" alt="Product Image">
+
+        <div class="product-live-box">
+            <span class="product-live-dot"></span>
+            <span class="product-live-text">LIVE</span>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+  
+
+<div class="slider-dots" id="sliderDots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+
+
+
+
+
+
+  
+
+    <!-- =========================
+         PRODUCT NAME
+    ========================== -->
+
+    <h2 id="productName"></h2>
+
+
+
+    <!-- =========================
+         DISCOUNT PRICE
+    ========================== -->
+
+    <div class="discount"
+         id="discountPrice">
+    </div>
+
+
+
+    <!-- =========================
+         OLD PRICE
+    ========================== -->
+
+    <div class="mainprice"
+         id="mainPrice">
+    </div>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+    <!-- =========================
+         PRODUCT DETAILS
+    ========================== -->
+
+    <div class="box">
+
+        <h3>Product Details</h3>
+
+        <ul id="productDetails"></ul>
+
+    </div>
+
+
+
+    <!-- =========================
+         PRODUCT DESCRIPTION
+    ========================== -->
+
+    <div class="box description-box">
+
+        <h3>Product Description</h3>
+
+        <p id="productDescription"></p>
+
+        <button
+            class="see-more"
+            id="seeMoreBtn"
+            onclick="toggleDescription()">
+
+            See More
+
+        </button>
+
+    </div>
+
+
+
+<div class="box description-box1">
+
+        <h3>Product Description2</h3>
+
+        <p id="productDescription3"></p>
+
+        
+
+</div>
+
+
+
+
+
+  
+
+    <!-- =========================
+         CASH ON DELIVERY
+    ========================== -->
+
+    <div class="box">
+
+        <h3>Cash on Delivery</h3>
+
+        <p>
+            <b>Available</b>
+        </p>
+
+        <p class="advance">
+
+            Advance Payment ₹350 Required
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         PAYMENT
+    ========================== -->
+
+
+<div class="trust-strip">
+    <div class="trust-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>100% Secure</span>
+    </div>
+
+    <div class="trust-item">
+        <i class="fa-solid fa-rotate-left"></i>
+        <span>Easy Return</span>
+    </div>
+
+    <div class="trust-item">
+        <i class="fa-solid fa-headset"></i>
+        <span>Customer Support</span>
+    </div>
+</div>
+
+
+
+  
+  <div class="payment-option">
+
+    <h2>Payment Option</h2>
+
+    <label>
+        <input type="radio"
+               name="paymentOption"
+               value="cod"
+               checked>
+        Cash on Delivery
+    </label>
+
+</div>
+
+<button
+    class="continue-btn"
+    onclick="checkPayment()">
+    Continue
+</button>
+
+
+</div>
+
+
+<script src="product.js"></script>
+
+</body>
+
+</html>
+
+
