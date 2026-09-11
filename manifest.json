@@ -1,0 +1,13 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Rephone",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Rephone",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "id": "Rephone",
+  "description": "Refurbished and repaired mobile phones at affordable prices."
+}
