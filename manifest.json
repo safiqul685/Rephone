@@ -9,5 +9,17 @@
   "start_url": "/",
   "theme_color": "#ffffff",
   "id": "Rephone",
-  "description": "Refurbished and repaired mobile phones at affordable prices."
+  "description": "Refurbished and repaired mobile phones at affordable prices.",
+  "icons": [
+    {
+      "src": "icon-192-1.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512-1.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
