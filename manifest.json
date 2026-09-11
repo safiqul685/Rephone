@@ -4,11 +4,11 @@
   "display": "standalone",
   "name": "Rephone",
   "orientation": "any",
-  "scope": "/",
+  "scope": "/Rephone/",
   "short_name": "Rephone",
-  "start_url": "/",
+  "start_url": "/Rephone/",
   "theme_color": "#ffffff",
-  "id": "Rephone",
+  "id": "/Rephone/",
   "description": "Refurbished and repaired mobile phones at affordable prices.",
   "icons": [
     {
