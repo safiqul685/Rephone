@@ -464,7 +464,7 @@ const products = {
             "Samsung S23 5G refurbished smartphone with premium design and powerful performance. The phone comes with 256GB storage and battery health of 90% or above. The device has been tested before sale and is suitable for daily use, gaming, photography and entertainment. 7 days return policy and 6 months warranty are available. Minor signs of previous use may be present."
         ,
 
-        codRazorpayLink: "https://rzp.io/rzp/NddqfGVE",
+        codRazorpayLink: "",
         onlineRazorpayLink: "https://rzp.io/rzp/s23online"
     },
 
@@ -2154,7 +2154,7 @@ const products = {
             "Samsung S23 5G refurbished smartphone with premium design and powerful performance. The phone comes with 256GB storage and battery health of 90% or above. The device has been tested before sale and is suitable for daily use, gaming, photography and entertainment. 7 days return policy and 6 months warranty are available. Minor signs of previous use may be present."
         ,
 
-        codRazorpayLink: "https://rzp.io/rzp/NddqfGVE",
+        codRazorpayLink: "",
         onlineRazorpayLink: "https://rzp.io/rzp/s23online"
     },
 
